@@ -1,0 +1,54 @@
+/* styling header section-------------------------*/
+.header-primary {
+   @extend .text-center;
+   @extend .text-md-left;
+   padding: 34px 0 28px;
+}
+.logo{
+  display: inline-block;
+  width: 175px;
+}
+.header-secondary{  
+  padding: 8px 0;
+  background-color: $color-warning;
+  .container{
+    @extend .d-flex;
+    @extend .flex-wrap;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    padding: 0 15px;
+  }
+  span{
+    color: $color-primary;
+    font-size: $base-size*1.8;
+    text-transform: uppercase;
+    font-weight: $wt800;
+    margin-right: 10px;
+  }
+  .btn{
+    font-size: $base-size*1.6;
+    min-width: 178px;
+    padding: 10px 20px;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+}
+@media all and (min-width: $container-md) {
+  .header-primary {
+    padding: 25px 0;
+  }
+}
+@media all and (min-width: $container-xl) {
+  .header-secondary{  
+    span{
+      font-size: $base-size*2.8;
+      margin-right: 20px;
+    }
+    .btn{
+      min-width: 218px;
+      font-size: $base-size*1.8;
+      padding: 9px 20px;
+    }
+  } 
+}
